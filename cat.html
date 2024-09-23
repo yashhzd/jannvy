@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Message</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ff69b4; /* Pink background */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ffa07a;
+        }
+        #loveMessage, #noMessage {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="question">
+        <h1>DO YOU LOVE ME JANI?</h1>
+        <button onclick="showLoveMessage()">Yes</button>
+        <button onclick="showNoMessage()">No</button>
+    </div>
+
+    <div id="loveMessage">
+        <h1>I LOVE YOU THE MOST!</h1>
+        <div class="tenor-gif-embed" data-postid="16507611245776227318" data-share-method="host" data-aspect-ratio="0.839695" data-width="100%">
+            <a href="https://tenor.com/view/hello-kitty-gif-16507611245776227318">Hello Kitty GIF</a> from <a href="https://tenor.com/search/hello+kitty-gifs">Hello Kitty GIFs</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <p>You're my favorite person in the world!</p>
+        <button onclick="restart()">Say it again!</button>
+    </div>
+
+    <div id="noMessage">
+        <h1>Oh no!</h1>
+        <div class="tenor-gif-embed" data-postid="26377178" data-share-method="host" data-aspect-ratio="1.33333" data-width="100%">
+            <a href="https://tenor.com/view/hello-kitty-the-fantasy-of-the-apple-forest-akuro-eyes-akuro-fairy-hello-kitty-the-fantasy-of-the-apple-forest-gif-26377178">Hello Kitty The Fantasy Of The Apple Forest Akuro Eyes GIF</a> from <a href="https://tenor.com/search/hello+kitty+the+fantasy+of+the+apple+forest+akuro-gifs">Hello Kitty The Fantasy Of The Apple Forest Akuro GIFs</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+        <p>Don't worry, I still think you're amazing!</p>
+        <button onclick="restart()">Let's try again!</button>
+    </div>
+
+    <script>
+        function showLoveMessage() {
+            document.getElementById('question').style.display = 'none';
+            document.getElementById('loveMessage').style.display = 'block';
+        }
+
+        function showNoMessage() {
+            document.getElementById('question').style.display = 'none';
+            document.getElementById('noMessage').style.display = 'block';
+        }
+
+        function restart() {
+            document.getElementById('loveMessage').style.display = 'none';
+            document.getElementById('noMessage').style.display = 'none';
+            document.getElementById('question').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
